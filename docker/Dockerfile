@@ -8,7 +8,8 @@ RUN apt-get install sqlite3 -y
 #
 # install Python for Gradescope submission:
 #
-RUN apt install python3 python3-pip -y
+# RUN apt install python3 python3-pip -y
+RUN apt-get update && apt-get install -y python3 python3-pip
 RUN pip3 install lizard click fullGSapi[cli] pyinstaller --break-system-packages
 RUN pip3 install requests jsons --break-system-packages
 #
